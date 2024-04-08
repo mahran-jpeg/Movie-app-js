@@ -46,6 +46,13 @@ function renderData() {;
   
 }
 
+document.addEventListener('keydown', function(event) {
+  if (event.key === 'Enter') {
+    fetchData();
+  }
+});
+
+
 searchButton.addEventListener('click', fetchData);
 
 
