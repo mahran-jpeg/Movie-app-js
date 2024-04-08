@@ -1,3 +1,9 @@
+export default async function Page() {
+  let res = await fetch('http://localhost:3000/api/data');
+  let data = await res.json();
+  return <h1>{JSON.stringify(data)}</h1>;
+}
+
 const input = document.querySelector('.movie__input');
 const productsList = document.querySelector('.movie__list');
 const searchButton = document.querySelector('.movie__search');
