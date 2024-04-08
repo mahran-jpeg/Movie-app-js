@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="index.css">
+  <script src="https://kit.fontawesome.com/335febe441.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <section id="heading">
+<div class="movie__background">
+  <figure class="movie__background__wrapper">
+  <div class="nav">
+<div class="nav__left">
+  <figure class="nav__ticket__wrapper">
+    <i class="fa-solid fa-ticket nav__ticket "></i>
+  </figure>
+ 
+ <div class="nav__link__wrapper">
+  <a href="" class="nav__left__link">
+    Home
+  </a>
+  <a href="" class="nav__left__link">
+    Contact
+  </a>
+ </div>
+  
+</div>
+<div class="nav__right">
+  <i class="fa-solid fa-user nav__right__icons nav__right__links"></i>
+  <i class="fa-solid fa-gear nav__right__icons nav__right__links"></i>
+ 
+</div>
+  </div>
+ <img src="images/moviebackground.jpg" alt="">
+</div>
+</figure>
+<div class="movie__background__text">
+<h1 class="movie__background__title">
+  Ticket <span class="red">+</span>
+</h1>
+<h3 class="movie__background__para">
+  With over 3000 movies on
+  Ticket<span class="red">+</span>, the possibilites are
+  endless!
+</h3>
+<div class="movie__input__wrapper">
+  <input
+  type="text"
+  class="movie__input"
+  placeholder="Find a movie"
+/>
+<i class="fa-solid fa-magnifying-glass movie__search" onclick="getMovies()"></i>
+</div>
+</div>
+  </section>
+  <section id="movie">
+<div class="conatiner">
+  <div class="row">
+<div class="all__movie__stuff">
+<div class="movie__searching__results">
+  <h3 class="movie__search__title">Search results for :</h3>
+  <br>
+  <p class="movie__search__results"></p>
+</div>
+<div class="movie__list">
+<div class="movie">
+  <figure class="movie__image__wrapper">
+<img src="images/postertest.jpg" alt="" class="movie__img">
+<h3 class="movie__info__title">Guardians of The Galaxy Vol. 2</h3>
+  <div class="movie__info__list">
+  <div class="movie__info ">
+    <i class="fa-solid fa-clock movie__info__icon"></i>
+     <p class="movie__info__text">136m</p>
+    </div>
+     <div class="movie__info">
+      <i class="fa-solid fa-star movie__info__icon"></i>
+       <p class="movie__info__text">4.5</p>
+       </div>
+          <div class="movie__info">
+          <i class="fa-solid fa-earth-americas movie__info__icon"></i>
+           <p class="movie__info__text">English</p>
+       </div>
+       </div>
+  </figure>
+  <h4 class="movie__title">Guardians of the Galaxy Vol. 2</h4>
+</div>
+<!-- Avenger -->
+
+<div class="movie">
+  <figure class="movie__image__wrapper">
+<img src="images/postertest3.jpg" alt="" class="movie__img">
+<h3 class="movie__info__title">Spider-Man: Homecoming</h3>
+  <div class="movie__info__list">
+  <div class="movie__info ">
+    <i class="fa-solid fa-clock movie__info__icon"></i>
+     <p class="movie__info__text">136m</p>
+    </div>
+     <div class="movie__info">
+      <i class="fa-solid fa-star movie__info__icon"></i>
+       <p class="movie__info__text">4.5</p>
+       </div>
+          <div class="movie__info">
+          <i class="fa-solid fa-earth-americas movie__info__icon"></i>
+           <p class="movie__info__text">English</p>
+       </div>
+       </div>
+  </figure>
+  <h4 class="movie__title">Spider-Man: Homecoming</h4>
+</div>
+
+
+
+
+
+<div class="movie">
+  <figure class="movie__image__wrapper">
+<img src="images/s-l1600.jpg" alt="" class="movie__img">
+<h3 class="movie__info__title">A Clockwork Orange</h3>
+  <div class="movie__info__list">
+  <div class="movie__info ">
+    <i class="fa-solid fa-clock movie__info__icon"></i>
+     <p class="movie__info__text">136m</p>
+    </div>
+     <div class="movie__info">
+      <i class="fa-solid fa-star movie__info__icon"></i>
+       <p class="movie__info__text">4.5</p>
+       </div>
+          <div class="movie__info">
+          <i class="fa-solid fa-earth-americas movie__info__icon"></i>
+           <p class="movie__info__text">English</p>
+       </div>
+       </div>
+  </figure>
+  <h4 class="movie__title">A Clockwork Orange</h4>
+</div>
+
+<div class="movie">
+  <figure class="movie__image__wrapper">
+<img src="images/interstellar.jpg" alt="" class="movie__img">
+<h3 class="movie__info__title">Interstellar</h3>
+  <div class="movie__info__list">
+  <div class="movie__info ">
+    <i class="fa-solid fa-clock movie__info__icon"></i>
+     <p class="movie__info__text">136m</p>
+    </div>
+     <div class="movie__info">
+      <i class="fa-solid fa-star movie__info__icon"></i>
+       <p class="movie__info__text">4.5</p>
+       </div>
+          <div class="movie__info">
+          <i class="fa-solid fa-earth-americas movie__info__icon"></i>
+           <p class="movie__info__text">English</p>
+       </div>
+       </div>
+  </figure>
+  <h4 class="movie__title">Interstellar</h4>
+</div>
+
+
+
+
+<div class="movie">
+  <figure class="movie__image__wrapper">
+<img src="images/tenet.jpg" alt="" class="movie__img">
+<h3 class="movie__info__title">Tenet</h3>
+  <div class="movie__info__list">
+  <div class="movie__info ">
+    <i class="fa-solid fa-clock movie__info__icon"></i>
+     <p class="movie__info__text">136m</p>
+    </div>
+     <div class="movie__info">
+      <i class="fa-solid fa-star movie__info__icon"></i>
+       <p class="movie__info__text">4.5</p>
+       </div>
+          <div class="movie__info">
+          <i class="fa-solid fa-earth-americas movie__info__icon"></i>
+           <p class="movie__info__text">English</p>
+       </div>
+       </div>
+  </figure>
+  <h4 class="movie__title">Tenet</h4>
+</div>
+
+<div class="movie">
+  <figure class="movie__image__wrapper">
+<img src="images/avenger wars.jpg" alt="" class="movie__img">
+<h3 class="movie__info__title">Avengers: Infinity War</h3>
+  <div class="movie__info__list">
+  <div class="movie__info ">
+    <i class="fa-solid fa-clock movie__info__icon"></i>
+     <p class="movie__info__text">136m</p>
+    </div>
+     <div class="movie__info">
+      <i class="fa-solid fa-star movie__info__icon"></i>
+       <p class="movie__info__text">4.5</p>
+       </div>
+          <div class="movie__info">
+          <i class="fa-solid fa-earth-americas movie__info__icon"></i>
+           <p class="movie__info__text">English</p>
+       </div>
+       </div>
+  </figure>
+  <h4 class="movie__title">Avengers: Infinity War</h4>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+</div>
+</div>
+</div>
+
+</section>
+<script src="index.js" defer></script>
+</body>
+</html>
