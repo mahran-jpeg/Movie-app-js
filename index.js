@@ -8,7 +8,7 @@ let movies = [];
 
 async function fetchData() {
   const inputValue = input.value.toLowerCase();
-  const response = await fetch(`http://www.omdbapi.com/?i=tt3896198&apikey=a6dcc2c2&s=${inputValue}`);
+  const response = await fetch(`https://www.omdbapi.com/?i=tt3896198&apikey=a6dcc2c2&s=${inputValue}`);
   const data = await response.json();
   movies = data.Search; 
   renderData();
