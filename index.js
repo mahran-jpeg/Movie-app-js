@@ -43,20 +43,16 @@ function renderData() {;
   }).join('')
 
   movieList.innerHTML = moviesHTML;
-  
+  input.value=''
 }
 
 document.addEventListener('keydown', function(event) {
   if (event.key === 'Enter') {
     fetchData();
+    input.value=''
   }
+  
 });
 
 
 searchButton.addEventListener('click', fetchData);
-
-
-
-
-
-

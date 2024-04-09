@@ -282,7 +282,10 @@ font-size: 24px;
 
   
 }
-
+::placeholder{
+  color:#989898;
+  
+}
 .movie__searching__results{
   display: flex;
   flex-direction: column;
@@ -403,3 +406,4 @@ align-items: flex-start;
   visibility: hidden;
  }
 }
+
