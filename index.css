@@ -272,7 +272,7 @@ opacity: 100%;
   opacity: 100%;
 }
 .movie__search__results{
-/* adding: 8px 0; */
+padding: 8px 0;
 margin-left: 24px;
 font-weight: 300;
 text-shadow:1px 1px 10px crimson, 1px 1px 10px crimson;

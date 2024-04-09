@@ -14,8 +14,7 @@ async function fetchData() {
   renderData();
 }
 
-function renderData() {;
-  searchResults.textContent=input.value;
+function renderData() {
   const filteredMovies = movies.filter(movie => movie.Title.toLowerCase().includes(input.value.toLowerCase()));
   const moviesHTML = filteredMovies.map((movie)=>{
     return `<div class="movie">
@@ -43,15 +42,20 @@ function renderData() {;
   }).join('')
 
   movieList.innerHTML = moviesHTML;
+  searchResults.innerHTML=input.value;
   input.value=''
 }
 
-document.addEventListener('keydown', function(event) {
+document.addEventListener('keydown', async function(event) {
+ 
   if (event.key === 'Enter') {
     fetchData();
-    input.value=''
+    setTimeout(() => {
+      searchResults.innerHTML = input.value;
+      input.value = '';
+    }, 5000000000);
   }
-  
+
 });
 
 
