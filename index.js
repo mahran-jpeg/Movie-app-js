@@ -39,7 +39,7 @@ function renderData() {
       <h4 class="movie__title">${movie.Title}</h4>
     </div>
     `
-  }).join('')
+  }).slice(0,6).join('')
 
   movieList.innerHTML = moviesHTML;
   searchResults.innerHTML=input.value;
