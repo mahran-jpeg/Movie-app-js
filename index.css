@@ -314,6 +314,29 @@ align-items: flex-start;
   }
 }
 
+.message__noResult{
+  font-size: 40px;
+color: crimson;
+
+}
+.bomb{
+  font-size: 40px;
+  color: yellow;
+}
+#noResultsMessage {
+  color: crimson;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.noResultsWrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: px;
+  flex-direction: row;
+  max-width: 750px;
+}
 /* MEDIA QUERIES */
 @media (max-width: 1200px) {
 

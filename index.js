@@ -3,6 +3,8 @@ const productsList = document.querySelector('.movie__list');
 const searchButton = document.querySelector('.movie__search');
 const movieList = document.querySelector('.movie__list')
 const searchResults = document.querySelector('.movie__search__results');
+const movie = document.querySelector('.movie');
+const noresultwrapper = document.querySelector('.noResultsWrapper')
 let movies = []; 
 let searchTimeout;
 
@@ -19,13 +21,18 @@ async function fetchData() {
 
 
 async function renderData() {
-  if (input.value.trim() === '') {
-    return;
-  }
-
+ 
+if(!movies){
+  noresultwrapper.style.display ='block';
+  movieList.style.display ='none';
+  searchResults.innerHTML='';
+return ;
+}
 
   movieList.innerHTML = ` <i class="fa-solid fa-spinner spinner spinner--show"></i>`;
   movieListTimeout = setTimeout(() => {
+   
+    
     const filteredMovies =  movies.filter(movie => movie.Title.toLowerCase().includes(input.value.toLowerCase()));
     const moviesHTML = filteredMovies.map((movie)=>{
       return `<div class="movie">
