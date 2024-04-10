@@ -291,6 +291,28 @@ font-size: 24px;
   flex-direction: column;
 align-items: flex-start;
 }
+.spinner {
+  font-size: 64px;
+  color: crimson;
+  margin: 0 auto;
+  /* display: none; */
+  position: absolute;
+  top: 24px;
+  /* right: 43%; */
+  animation: loading 1000ms infinite;
+}
+
+.spinner--show {
+  display: block;
+}
+@keyframes loading {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 
 /* MEDIA QUERIES */
 @media (max-width: 1200px) {
