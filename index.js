@@ -26,6 +26,7 @@ if(!movies){
   noresultwrapper.style.display ='block';
   movieList.style.display ='none';
   searchResults.innerHTML='';
+  input.value =''
 return ;
 }
 
