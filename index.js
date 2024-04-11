@@ -27,7 +27,7 @@ if(!movies){
   movieList.style.display ='none';
   searchResults.innerHTML='';
   input.value =''
-return ;
+
 }
 
   movieList.innerHTML = ` <i class="fa-solid fa-spinner spinner spinner--show"></i>`;

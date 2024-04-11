@@ -450,5 +450,11 @@ color: crimson;
  .nav{
   visibility: hidden;
  }
+.movie__list{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+}
+
 
