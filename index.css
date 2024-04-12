@@ -295,16 +295,14 @@ align-items: flex-start;
   font-size: 64px;
   color: crimson;
   margin: 0 auto;
-  /* display: none; */
   position: absolute;
   top: 24px;
-  /* right: 43%; */
   animation: loading 1000ms infinite;
 }
 
-.spinner--show {
+/* .spinner--show {
   display: block;
-}
+} */
 @keyframes loading {
   0% {
     transform: rotate(0deg);

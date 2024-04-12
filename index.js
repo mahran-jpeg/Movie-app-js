@@ -32,39 +32,39 @@ if(!movies){
 
   movieList.innerHTML = ` <i class="fa-solid fa-spinner spinner spinner--show"></i>`;
   movieListTimeout = setTimeout(() => {
-   
-    
     const filteredMovies =  movies.filter(movie => movie.Title.toLowerCase().includes(input.value.toLowerCase()));
-    const moviesHTML = filteredMovies.map((movie)=>{
-      return `<div class="movie">
-        <figure class="movie__image__wrapper">
-          <img src="${movie.Poster}" alt="" class="movie__img">
-          <h3 class="movie__info__title">${movie.Title}</h3>
-          <div class="movie__info__list">
-            <div class="movie__info ">
-              <i class="fa-solid fa-clock movie__info__icon"></i>
-              <p class="movie__info__text">136m</p>
-            </div>
-            <div class="movie__info">
-              <i class="fa-solid fa-star movie__info__icon"></i>
-              <p class="movie__info__text">4.5</p>
-            </div>
-            <div class="movie__info">
-              <i class="fa-solid fa-earth-americas movie__info__icon"></i>
-              <p class="movie__info__text">English</p>
-            </div>
+  const moviesHTML = filteredMovies.map((movie)=>{
+    return `<div class="movie">
+      <figure class="movie__image__wrapper">
+        <img src="${movie.Poster}" alt="" class="movie__img">
+        <h3 class="movie__info__title">${movie.Title}</h3>
+        <div class="movie__info__list">
+          <div class="movie__info ">
+            <i class="fa-solid fa-clock movie__info__icon"></i>
+            <p class="movie__info__text">136m</p>
           </div>
-        </figure>
-        <h4 class="movie__title">${movie.Title}</h4>
-      </div>
-      `
-    }).slice(0,6).join('')
-    
-    movieList.innerHTML = moviesHTML;
-    searchResults.innerHTML=input.value;
-    input.value=''
-  }, 2000); 
+          <div class="movie__info">
+            <i class="fa-solid fa-star movie__info__icon"></i>
+            <p class="movie__info__text">4.5</p>
+          </div>
+          <div class="movie__info">
+            <i class="fa-solid fa-earth-americas movie__info__icon"></i>
+            <p class="movie__info__text">English</p>
+          </div>
+        </div>
+      </figure>
+      <h4 class="movie__title">${movie.Title}</h4>
+    </div>
+    `
+  }).slice(0,6).join('')
   
+  movieList.innerHTML = moviesHTML;
+  searchResults.innerHTML=input.value;
+  input.value=''
+  
+  
+  }, 2000); 
+ 
 }
 document.addEventListener('keydown', async function(event) {
   clearTimeout(searchTimeout);
