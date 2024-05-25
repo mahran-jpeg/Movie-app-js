@@ -19,6 +19,10 @@ body {
 .row {
   margin: 0 40px;
 }
+
+.nav__right__icons:hover{
+  cursor:not-allowed
+}
 /* HEADING */
 .nav {
   display: flex;

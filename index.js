@@ -1,38 +1,42 @@
-const input = document.querySelector('.movie__input');
-const productsList = document.querySelector('.movie__list');
-const searchButton = document.querySelector('.movie__search');
-const movieList = document.querySelector('.movie__list');
-const searchResults = document.querySelector('.movie__search__results');
-const movie = document.querySelector('.movie');
-const noresultwrapper = document.querySelector('.noResultsWrapper');
+const input = document.querySelector(".movie__input");
+const productsList = document.querySelector(".movie__list");
+const searchButton = document.querySelector(".movie__search");
+const movieList = document.querySelector(".movie__list");
+const searchResults = document.querySelector(".movie__search__results");
+const movie = document.querySelector(".movie");
+const noresultwrapper = document.querySelector(".noResultsWrapper");
 let movies = [];
 let searchTimeout;
 
 async function fetchData() {
   const inputValue = input.value.toLowerCase();
-  const response = await fetch(`https://www.omdbapi.com/?i=tt3896198&apikey=a6dcc2c2&s=${inputValue}`);
+  const response = await fetch(
+    `https://www.omdbapi.com/?i=tt3896198&apikey=a6dcc2c2&s=${inputValue}`
+  );
   const data = await response.json();
   movies = data.Search;
 
   if (!movies) {
-   noresultwrapper.style.display = 'block';
-  movieList.style.display = 'none';
-  searchResults.innerHTML = '';
-  input.value = '';
-
+    noresultwrapper.style.display = "block";
+    movieList.style.display = "none";
+    searchResults.innerHTML = "";
+    input.value = "";
   } else {
     renderData();
-    movieList.style.display = '';
-    noresultwrapper.style.display = 'none';
+    movieList.style.display = "";
+    noresultwrapper.style.display = "none";
   }
 }
 
 async function renderData() {
   movieList.innerHTML = ` <i class="fa-solid fa-spinner spinner spinner--show"></i>`;
   movieListTimeout = setTimeout(() => {
-    const filteredMovies = movies.filter(movie => movie.Title.toLowerCase().includes(input.value.toLowerCase()));
-    const moviesHTML = filteredMovies.map((movie) => {
-      return `<div class="movie">
+    const filteredMovies = movies.filter((movie) =>
+      movie.Title.toLowerCase().includes(input.value.toLowerCase())
+    );
+    const moviesHTML = filteredMovies
+      .map((movie) => {
+        return `<div class="movie">
       <figure class="movie__image__wrapper">
         <img src="${movie.Poster}" alt="" class="movie__img">
         <h3 class="movie__info__title">${movie.Title}</h3>
@@ -53,19 +57,20 @@ async function renderData() {
       </figure>
       <h4 class="movie__title">${movie.Title}</h4>
     </div>`;
-    }).slice(0, 6).join('');
+      })
+      .slice(0, 6)
+      .join("");
 
     movieList.innerHTML = moviesHTML;
     searchResults.innerHTML = input.value;
-    input.value = '';
+    input.value = "";
   }, 2000);
 }
 
-
-document.addEventListener('keydown', async function(event) {
+document.addEventListener("keydown", async function (event) {
   clearTimeout(searchTimeout);
-  if (event.key === 'Enter') {
-    if (input.value.trim() === '') {
+  if (event.key === "Enter") {
+    if (input.value.trim() === "") {
       return;
     }
     searchTimeout = setTimeout(() => {
@@ -74,4 +79,4 @@ document.addEventListener('keydown', async function(event) {
   }
 });
 
-searchButton.addEventListener('click', fetchData);
+searchButton.addEventListener("click", fetchData);
